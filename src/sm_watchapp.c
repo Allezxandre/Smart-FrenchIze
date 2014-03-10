@@ -511,8 +511,8 @@ static void window_disappear(Window *window)
 void battery_layer_update_callback(Layer *me, GContext* ctx) {
 	
 	//draw the remaining battery percentage
-	graphics_context_set_stroke_color(ctx, GColorBlack);
-	graphics_context_set_fill_color(ctx, GColorWhite);
+	graphics_context_set_stroke_color(ctx, GColorWhite);
+	graphics_context_set_fill_color(ctx, GColorBlack);
 
 	graphics_fill_rect(ctx, GRect(2+16-(int)((batteryPercent/100.0)*16.0), 2, (int)((batteryPercent/100.0)*16.0), 8), 0, GCornerNone);
 	
@@ -521,8 +521,8 @@ void battery_layer_update_callback(Layer *me, GContext* ctx) {
 void battery_pbl_layer_update_callback(Layer *me, GContext* ctx) {
 	
 	//draw the remaining pebble battery percentage
-	graphics_context_set_stroke_color(ctx, GColorBlack);
-	graphics_context_set_fill_color(ctx, GColorWhite);
+	graphics_context_set_stroke_color(ctx, GColorWhite);
+	graphics_context_set_fill_color(ctx, GColorBlack);
 
 	graphics_fill_rect(ctx, GRect(2+16-(int)((batteryPblPercent/100.0)*16.0), 2, (int)((batteryPblPercent/100.0)*16.0), 8), 0, GCornerNone);
 	
@@ -680,7 +680,7 @@ font_time = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOLD_52)
 
 	text_battery_layer = text_layer_create(GRect(99, 20, 40, 60));
 	text_layer_set_text_alignment(text_battery_layer, GTextAlignmentCenter);
-	text_layer_set_text_color(text_battery_layer, GColorWhite);
+	text_layer_set_text_color(text_battery_layer, GColorBlack);
 	text_layer_set_background_color(text_battery_layer, GColorClear);
 	text_layer_set_font(text_battery_layer,  fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
 	layer_add_child(weather_layer, text_layer_get_layer(text_battery_layer));
@@ -706,7 +706,7 @@ font_time = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOLD_52)
 
 	text_weather_cond_layer = text_layer_create(GRect(48, 1, 48, 40)); // GRect(5, 2, 47, 40)
 	text_layer_set_text_alignment(text_weather_cond_layer, GTextAlignmentCenter);
-	text_layer_set_text_color(text_weather_cond_layer, GColorWhite);
+	text_layer_set_text_color(text_weather_cond_layer, GColorBlack);
 	text_layer_set_background_color(text_weather_cond_layer, GColorClear);
 	text_layer_set_font(text_weather_cond_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18));
 	layer_add_child(weather_layer, text_layer_get_layer(text_weather_cond_layer));
@@ -727,7 +727,7 @@ font_time = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOLD_52)
 
 	text_weather_temp_layer = text_layer_create(GRect(48, 3, 48, 40)); 
 	text_layer_set_text_alignment(text_weather_temp_layer, GTextAlignmentCenter);
-	text_layer_set_text_color(text_weather_temp_layer, GColorWhite);
+	text_layer_set_text_color(text_weather_temp_layer, GColorBlack);
 	text_layer_set_background_color(text_weather_temp_layer, GColorClear);
 	text_layer_set_font(text_weather_temp_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28));
 	layer_add_child(weather_layer, text_layer_get_layer(text_weather_temp_layer));
@@ -739,7 +739,7 @@ font_time = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOLD_52)
 	//init layers for time and date
 	text_date_layer = text_layer_create(bg_bounds);
 	text_layer_set_text_alignment(text_date_layer, GTextAlignmentCenter);
-	text_layer_set_text_color(text_date_layer, GColorWhite);
+	text_layer_set_text_color(text_date_layer, GColorBlack);
 	text_layer_set_background_color(text_date_layer, GColorClear);
 	layer_set_frame(text_layer_get_layer(text_date_layer), GRect(0, 50, 144, 30));
 	text_layer_set_font(text_date_layer, font_date);
@@ -748,7 +748,7 @@ font_time = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOLD_52)
 
 	text_time_layer = text_layer_create(bg_bounds);
 	text_layer_set_text_alignment(text_time_layer, GTextAlignmentCenter);
-	text_layer_set_text_color(text_time_layer, GColorWhite);
+	text_layer_set_text_color(text_time_layer, GColorBlack);
 	text_layer_set_background_color(text_time_layer, GColorClear);
 	layer_set_frame(text_layer_get_layer(text_time_layer), GRect(0, -5, 144, 55));
 	text_layer_set_font(text_time_layer, font_time);
@@ -762,7 +762,7 @@ font_time = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOLD_52)
 	
 	calendar_date_layer = text_layer_create(GRect(6, 0, 132, 21));
 	text_layer_set_text_alignment(calendar_date_layer, GTextAlignmentLeft);
-	text_layer_set_text_color(calendar_date_layer, GColorWhite);
+	text_layer_set_text_color(calendar_date_layer, GColorBlack);
 	text_layer_set_background_color(calendar_date_layer, GColorClear);
 	text_layer_set_font(calendar_date_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18));
 	layer_add_child(animated_layer[CALENDAR_LAYER], text_layer_get_layer(calendar_date_layer));
@@ -771,7 +771,7 @@ font_time = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOLD_52)
 
 	calendar_text_layer = text_layer_create(GRect(6, 15, 132, 28));
 	text_layer_set_text_alignment(calendar_text_layer, GTextAlignmentLeft);
-	text_layer_set_text_color(calendar_text_layer, GColorWhite);
+	text_layer_set_text_color(calendar_text_layer, GColorBlack);
 	text_layer_set_background_color(calendar_text_layer, GColorClear);
 	text_layer_set_font(calendar_text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
 	layer_add_child(animated_layer[CALENDAR_LAYER], text_layer_get_layer(calendar_text_layer));
@@ -785,7 +785,7 @@ font_time = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOLD_52)
 	
 	music_artist_layer = text_layer_create(GRect(6, 0, 132, 21));
 	text_layer_set_text_alignment(music_artist_layer, GTextAlignmentLeft);
-	text_layer_set_text_color(music_artist_layer, GColorWhite);
+	text_layer_set_text_color(music_artist_layer, GColorBlack);
 	text_layer_set_background_color(music_artist_layer, GColorClear);
 	text_layer_set_font(music_artist_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18));
 	layer_add_child(animated_layer[MUSIC_LAYER], text_layer_get_layer(music_artist_layer));
@@ -794,7 +794,7 @@ font_time = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOLD_52)
 
 	music_song_layer = text_layer_create(GRect(6, 15, 132, 28));
 	text_layer_set_text_alignment(music_song_layer, GTextAlignmentLeft);
-	text_layer_set_text_color(music_song_layer, GColorWhite);
+	text_layer_set_text_color(music_song_layer, GColorBlack);
 	text_layer_set_background_color(music_song_layer, GColorClear);
 	text_layer_set_font(music_song_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
 	layer_add_child(animated_layer[MUSIC_LAYER], text_layer_get_layer(music_song_layer));
