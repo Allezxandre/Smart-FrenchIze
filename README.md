@@ -1,6 +1,8 @@
 SmartFrenchIze Watch App
 =====================
-![Smartwatch+ Banner](https://raw.github.com/Allezxandre/SmartStatus-AppStore/master/AppStore%20Assets/SmartFrenchIze-Header.png)
+
+![SmartFrenchIze Inverted](/Inverted — Screenshot.png)
+--
 
 ### Téléchargement
 Pour télécharger la **dernière version** : [suivez ce lien](https://github.com/Allezxandre/Smart-FrenchIze-Jailbreak/releases)
@@ -32,4 +34,4 @@ Bien sur, cette version modifiée inclut en plus les fonctionnalités de la vers
 * Désormais, le calendrier adapte la taille du texte à la fenêtre
 (il y a beaucoup d’autres améliorations sur le calendrier, je vous laisse les découvrir :smile: )
 
-![SmartStatus watchapp](https://raw.github.com/Allezxandre/SmartStatus-AppStore/master/SmartStatus.jpg)
+![Smartwatch+ Banner](https://raw.github.com/Allezxandre/SmartStatus-AppStore/master/AppStore%20Assets/SmartFrenchIze-Header.png)
