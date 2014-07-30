@@ -628,7 +628,6 @@ void batteryChanged(BatteryChargeState batt) {
 
 
 static void init(void) {
-	APP_LOG(APP_LOG_LEVEL_INFO,"STARTING SmartFrenchIze");
   window = window_create();
   window_set_fullscreen(window, true);
   window_set_click_config_provider(window, click_config_provider);
@@ -644,6 +643,8 @@ static void init(void) {
 font_date = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_CONDENSED_21));
 font_time = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BOLD_52));
 
+
+	APP_LOG(APP_LOG_LEVEL_INFO,"STARTING SmartFrenchIze");
 	//init weather images
 	for (int i=0; i<NUM_WEATHER_IMAGES; i++) {
 	  	weather_status_imgs[i] = gbitmap_create_with_resource(WEATHER_IMG_IDS[i]);
